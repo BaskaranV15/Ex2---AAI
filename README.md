@@ -27,7 +27,8 @@ network = BayesianNetwork([('Burglary', 'Alarm'),
                            ('Earthquake', 'Alarm'),
                            ('Alarm', 'JohnCalls'),
                            ('Alarm', 'MaryCalls')])
-
+```
+```
 cpd_burglary = TabularCPD(variable='Burglary', variable_card=2, values=[[0.999], [0.001]])
 cpd_earthquake = TabularCPD(variable='Earthquake', variable_card=2, values=[[0.998], [0.002]])
 cpd_alarm = TabularCPD(variable='Alarm', variable_card=2,
@@ -57,12 +58,7 @@ result = inference.query(variables=[query_variable], evidence=evidence)
 print(result)
 
 ```
-
 ## Output :
-
 ![image](https://github.com/BaskaranV15/Ex2---AAI/assets/118703522/0d5745ce-c9be-4127-a4db-fdaf629c2f85)
-
-
 ## Result :
 Thus, Bayesian Inference was successfully determined using Variable Elimination Method
-
